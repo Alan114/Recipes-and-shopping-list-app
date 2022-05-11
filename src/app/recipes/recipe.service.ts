@@ -23,6 +23,17 @@ export class RecipeService {
       'https://www.thespruceeats.com/thmb/Fu_L3kpDn2LRdHiURemlcWnMsJ4=/4000x3000/smart/filters:no_upscale()/24-5b3f8572c9e77c00378cff46.jpg',
       [new Ingredient('Strawberries', 6), new Ingredient('Whipping cream', 1)]
     ),
+    new Recipe(
+      'Spaghetti sauce mix',
+      'Make your own delicious and easy Spaghetti Sauce Mix to store in your pantry for fresh tasting sauce...',
+      'https://www.thespruceeats.com/thmb/2Xjv9wEbjXQu2bNLUGOmd4RcwDM=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/175408128-58add6bf3df78c345bdefabc.jpg',
+      [
+        new Ingredient('Onion', 1),
+        new Ingredient('Dried parsley flakes', 1),
+        new Ingredient('Cornstarch', 1),
+        new Ingredient('Salt', 1),
+      ]
+    ),
   ];
 
   constructor(private shoppingListService: ShoppingListService) {}
