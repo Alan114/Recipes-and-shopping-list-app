@@ -11,7 +11,7 @@ import { ShoppingListService } from './shopping-list.service';
 })
 export class ShoppingListComponent implements OnInit, OnDestroy {
   ingredients: Observable<{ ingredients: Ingredient[] }>;
-  private ingredientsChangeSubscription: Subscription;
+  private subscription: Subscription;
 
   constructor(
     private shoppingListService: ShoppingListService,
@@ -21,7 +21,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.ingredients = this.store.select('shoppingList');
     // this.ingredients = this.shoppingListService.getIngredients();
-    // this.ingredientsChangeSubscription =
+    // this.subscription =
     //   this.shoppingListService.ingredientsChanged.subscribe(
     //     (ingredients: Ingredient[]) => {
     //       this.ingredients = ingredients;
@@ -34,6 +34,6 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // this.ingredientsChangeSubscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
 }
