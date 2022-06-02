@@ -77,11 +77,11 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     this.router.navigate(['../'], { relativeTo: this.route });
   }
 
-  ngOnDestroy(): void {
-    if (this.storeSub) {
-      this.storeSub.unsubscribe();
-    }
-  }
+  // ngOnDestroy(): void {
+  //   if (this.storeSub) {
+  //     this.storeSub.unsubscribe();
+  //   }
+  // }
 
   initForm() {
     let recipeName = '';
@@ -142,5 +142,11 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
       description: new FormControl(recipeDescription, Validators.required),
       ingredients: recipeIngredients,
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.storeSub) {
+      this.storeSub.unsubscribe();
+    }
   }
 }
